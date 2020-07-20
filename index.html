@@ -11,8 +11,28 @@
     <h1>hello</h1>
     <h2>hello2</h2>
     <h3>hello3</h3>
-    <h4>hello4</h4>
+    <h4 id="demo">被改變的文字</h4>
+    <script>
+        function myFunction() {
+            x = document.getElementById("demo"); // 找到元素
+            x.innerHTML = "Hello JavaScript!"; // 改内容
+        }
+    </script>
+    <button type="button" onclick="myFunction()">點這裡</button>
+    <h1></h1>
 
+    <script>
+        function changeImage() {
+            element = document.getElementById('myimage')
+            if (element.src.match("bulbon")) {
+                element.src = "https://www.runoob.com/images/pic_bulboff.gif";
+            } else {
+                element.src = "https://www.runoob.com/images/pic_bulbon.gif";
+            }
+        }
+    </script>
+    <img id="myimage" onclick="changeImage()" src="https://www.runoob.com/images/pic_bulboff.gif" width="100" height="180">
+    <p>按一下電燈泡</p>
 </body>
 
 </html>
